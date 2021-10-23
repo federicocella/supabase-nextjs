@@ -6,6 +6,7 @@ export default function Account({ session }) {
     const [username, setUsername] = useState(null)
     const [website, setWebsite] = useState(null)
     const [avatar_url, setAvatarUrl] = useState(null)
+    const [polls, setPolls] = useState(null)
 
     useEffect(() => {
         getProfile()
@@ -105,6 +106,7 @@ export default function Account({ session }) {
                     Sign Out
                 </button>
             </div>
+            {polls}
         </div>
     )
 }
