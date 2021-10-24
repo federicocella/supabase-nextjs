@@ -35,6 +35,11 @@ export default function Auth({ session }) {
         }
     }
     return (<ul>
-        {polls ? polls.map((poll, i) => (<li key={poll.id}><Link href={'/poll/' + i}><a>{poll.title}</a></Link></li>)) : ''}
+        {polls ? polls.map((poll, i) => (
+            <li key={poll.id}>
+                <Link href={'/poll/' + (i + 1)}>
+                    <a>{poll.title}</a>
+                </Link>
+            </li>)) : ''}
     </ul>)
 }
